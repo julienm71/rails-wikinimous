@@ -1,0 +1,16 @@
+<h1>Articles Manager</h1>
+<hr>
+
+<% @articles.each do |article| %>
+  <div class="card">
+    <div class="card-header">
+      <%= link_to article.title, article_path(article) %>
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p><%= article.content %></p>
+        <footer class="blockquote-footer">Wikinimous</footer>
+      </blockquote>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<h1>Creating an article</h1>
+<hr>
+
+<%= form_for @article do |f| %>
+  <div class="form-group">
+      <%= f.label :title, 'Article title' %>
+      <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+      <%= f.label :content, 'Article content' %>
+      <%= f.text_field :content, class: "form-control" %>
+  </div>
+  <%= f.submit class: "btn btn-primary" %>
+  <div style="padding-top:10px;">
+    <p><i class="fa fa-history"></i> <%= link_to "Back to index",  articles_path %></p>
+  </div>
+<% end %>
